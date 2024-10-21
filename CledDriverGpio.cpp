@@ -6,7 +6,7 @@ CledDriverGpio::CledDriverGpio()
 
 }
 
-void CledDriverGpio::write()
+void CledDriverGpio::writeGpio()
 {
     qDebug("%s", __func__);
 }

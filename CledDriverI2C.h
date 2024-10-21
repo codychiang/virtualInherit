@@ -6,7 +6,7 @@ class CledDriverI2C
 {
 public:
     CledDriverI2C();
-    void write();
+    void writeI2C();
 };
 
 #endif // LEDDRIVERI2C_H

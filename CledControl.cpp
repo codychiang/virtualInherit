@@ -18,11 +18,11 @@ CledControl::CledControl(CledDriverI2C *ledDriverI2C, CledDriverGpio *ledDriverG
 void CledControl::run()
 {
     if(m_ledDriverI2C){
-        m_ledDriverI2C->write();
+        m_ledDriverI2C->writeI2C();
     }
 
     if(m_ledDriverGpio){
-        m_ledDriverGpio->write();
+        m_ledDriverGpio->writeGpio();
     }
 
 }

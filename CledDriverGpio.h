@@ -6,7 +6,7 @@ class CledDriverGpio
 {
 public:
     CledDriverGpio();
-    void write();
+    void writeGpio();
 };
 
 #endif // LEDDRIVERGPIO_H
