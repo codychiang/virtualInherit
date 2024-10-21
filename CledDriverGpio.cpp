@@ -1,12 +1,14 @@
 #include "CledDriverGpio.h"
 #include <QDebug>
 
+
 CledDriverGpio::CledDriverGpio()
 {
 
 }
 
-void CledDriverGpio::writeGpio()
+//override
+void CledDriverGpio::write()
 {
     qDebug("%s", __func__);
 }

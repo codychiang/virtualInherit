@@ -1,18 +1,16 @@
 #ifndef CLEDCONTROL_H
 #define CLEDCONTROL_H
 
-class CledDriverI2C;
-class CledDriverGpio;
+class CledDriverAbstract;
 
 class CledControl
 {
 public:
     CledControl();
-    CledControl(CledDriverI2C *ledDriverI2C, CledDriverGpio *ledDriverGpio);
+    CledControl(CledDriverAbstract *ledDriverAbstract);
     void run();
 private:
-    CledDriverI2C *m_ledDriverI2C;
-    CledDriverGpio *m_ledDriverGpio;
+    CledDriverAbstract *m_ledDriverAbstract;
 };
 
 #endif // LEDCONTROL_H

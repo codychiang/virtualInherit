@@ -1,12 +1,13 @@
 #ifndef CLEDDRIVERGPIO_H
 #define CLEDDRIVERGPIO_H
 
+#include "CledDriverAbstract.h"
 
-class CledDriverGpio
+class CledDriverGpio: public CledDriverAbstract
 {
 public:
     CledDriverGpio();
-    void writeGpio();
+    void write() override;
 };
 
 #endif // LEDDRIVERGPIO_H

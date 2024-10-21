@@ -6,7 +6,7 @@ class CledDriverAbstract
 {
 public:
     CledDriverAbstract();
-    void write();
+    virtual void write() = 0;
 };
 
 #endif // LEDDRIVERABSTRACT_H

@@ -6,7 +6,8 @@ CledDriverI2C::CledDriverI2C()
 
 }
 
-void CledDriverI2C::writeI2C()
+//override
+void CledDriverI2C::write()
 {
     qDebug("%s", __func__);
 }

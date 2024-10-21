@@ -4,27 +4,20 @@
 
 CledControl::CledControl()
 {
-    m_ledDriverI2C = nullptr;
-    m_ledDriverGpio = nullptr;
+    m_ledDriverAbstract = nullptr;
 }
 
-CledControl::CledControl(CledDriverI2C *ledDriverI2C, CledDriverGpio *ledDriverGpio)
+CledControl::CledControl(CledDriverAbstract *ledDriverAbstract)
     : CledControl()
 {
-    m_ledDriverI2C = ledDriverI2C;
-    m_ledDriverGpio = ledDriverGpio;
+    m_ledDriverAbstract = ledDriverAbstract;
 }
 
 void CledControl::run()
 {
-    if(m_ledDriverI2C){
-        m_ledDriverI2C->writeI2C();
+    if(m_ledDriverAbstract){
+        m_ledDriverAbstract->write();
     }
-
-    if(m_ledDriverGpio){
-        m_ledDriverGpio->writeGpio();
-    }
-
 }
 
 
