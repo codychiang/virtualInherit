@@ -11,8 +11,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     CledDriverGpio ledDriverGpio;
-    CledControl ledControl(&ledDriverGpio);
-    ledControl.run();
+    CledDriverGpio ledDriverI2C;
+    CledControl ledControl_1(&ledDriverGpio);
+    CledControl ledControl_2(&ledDriverI2C);
+    ledControl_1.run();
+    ledControl_2.run();
 
 
 }
